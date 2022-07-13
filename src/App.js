@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 import { Route, Switch } from "react-router-dom";
 import Music from './components/Music';
 import aaoge from "./images/aaoge jab tum.jpg";
@@ -9,16 +9,20 @@ import udaariyan from "./images/udaariyan.jpg";
 import tum from "./images/tum hi ho.jpg";
 import Artistdetails from "./components/Artistdetails";
 import Artistheader from './components/Artistheader';
-import Preview from './components/Preview';
 import AddNewSong from './pages/AddNewSong';
+import Login from './components/Login';
+import SignUp from './components/Signup';
 
 
 function App() {
   return (
-    <>    
+    <>
     <Header></Header>
     <Switch>
       <Route exact path="/">
+        <Redirect to={"/login"}/>
+      </Route>
+      <Route exact path="/home">
         <div id="s">
           <div id="s1">Top 10 Musics</div>
           <Link id="s3" to="/AddNewSong">
@@ -91,6 +95,12 @@ function App() {
       </Route>
       <Route exact path="/AddNewSong">
         <AddNewSong />
+      </Route>
+      <Route exact path="/login">
+        <Login/>
+      </Route>
+      <Route exact path="/signup">
+        <SignUp/>
       </Route>
     </Switch>
     </>
