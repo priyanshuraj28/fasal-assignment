@@ -26,7 +26,7 @@ function Music(props) {
     <div>
       <div id="songsname">
         <div id="imgcontrol">
-          <img class="img12" src={props.Artwork}></img>
+          <img class="img12" src={props.Artwork} alt="artwork"></img>
         </div>
         <div id="song-control">{props.song}</div>
         <div id="song-control">{props.dateOfRelease}</div>

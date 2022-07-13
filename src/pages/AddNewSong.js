@@ -13,7 +13,7 @@ function AddNewSong() {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
-  const [artist, setArtist] = useState([
+  const [artist, setArtist] = useState([  //eslint-disable-line
     "Arijit Singh",
     "Rashid Khan",
     "Shankar Mahadevan",
